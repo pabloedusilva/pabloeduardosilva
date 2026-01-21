@@ -1,0 +1,226 @@
+.about {
+  padding: var(--spacing-4xl) 0;
+  background: var(--color-bg-secondary);
+}
+
+.container {
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: 0 var(--container-padding);
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.sectionLabel {
+  display: inline-block;
+  color: var(--color-accent);
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5rem;
+}
+
+.sectionTitle {
+  font-size: var(--font-size-4xl);
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+}
+
+.textContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  z-index: 1;
+}
+
+.textContent p {
+  font-size: var(--font-size-lg);
+  line-height: 1.8;
+  color: var(--color-text-secondary);
+  margin: 0;
+}
+
+.imagesContainer {
+  position: relative;
+  width: 100%;
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.imageWrapper {
+  position: absolute;
+}
+
+.floatingImage {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(59, 130, 246, 0.5));
+  transition: filter 0.3s ease;
+  cursor: pointer;
+}
+
+.floatingImage:hover {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 30px rgba(59, 130, 246, 0.5));
+}
+
+.floatingImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  pointer-events: auto;
+}
+
+/* Posicionamento individual de cada imagem */
+.html5 {
+  top: 5%;
+  left: 8%;
+  width: 230px;
+  height: 230px;
+  z-index: 3;
+}
+
+.html5 .floatingImage {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
+}
+
+.react {
+  top: 15%;
+  right: 10%;
+  width: 130px;
+  height: 130px;
+  z-index: 0;
+  filter: blur(2px);
+}
+
+.react .floatingImage {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
+}
+
+.notebook {
+  top: 15%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  width: 450px;
+  height: 450px;
+  z-index: 1;
+}
+
+.notebook .floatingImage {
+  filter: drop-shadow(0 15px 35px rgba(0, 0, 0, 0.3)) drop-shadow(0 0 40px rgba(59, 130, 246, 0.6));
+}
+
+.nodejs {
+  bottom: 8%;
+  left: 10%;
+  width: 120px;
+  height: 120px;
+  z-index: 3;
+}
+
+.nodejs .floatingImage {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
+}
+
+.vscode {
+  bottom: 5%;
+  right: 2%;
+  width: 170px;
+  height: 170px;
+  z-index: 4;
+}
+
+.vscode .floatingImage {
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.2)) drop-shadow(0 0 20px rgba(59, 130, 246, 0.2));
+}
+
+@media (max-width: 1024px) {
+  .sectionTitle {
+    font-size: var(--font-size-3xl);
+  }
+
+  .content {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+  }
+
+  .imagesContainer {
+    height: 420px;
+  }
+
+  .html5 {
+    width: 200px;
+    height: 200px;
+  }
+
+  .react {
+    width: 115px;
+    height: 115px;
+  }
+
+  .notebook {
+    width: 390px;
+    height: 390px;
+  }
+
+  .nodejs {
+    width: 105px;
+    height: 105px;
+  }
+
+  .vscode {
+    width: 145px;
+    height: 145px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sectionTitle {
+    font-size: var(--font-size-2xl);
+  }
+
+  .textContent p {
+    font-size: var(--font-size-base);
+  }
+
+  .imagesContainer {
+    height: 350px;
+  }
+
+  .html5 {
+    width: 150px;
+    height: 150px;
+  }
+
+  .react {
+    width: 85px;
+    height: 85px;
+  }
+
+  .notebook {
+    width: 295px;
+    height: 295px;
+  }
+
+  .nodejs {
+    width: 80px;
+    height: 80px;
+  }
+
+  .vscode {
+    width: 110px;
+    height: 110px;
+  }
+}
