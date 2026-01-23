@@ -32,24 +32,82 @@
 }
 
 .imageContainer {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
+  overflow: hidden;
+}
+
+.imageWrapper {
+  width: 100%;
+  position: relative;
 }
 
 .skillsImage {
   width: 100%;
   height: auto;
   border-radius: var(--radius-2xl);
-  box-shadow: var(--shadow-xl);
-  transition: transform var(--transition-slow);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3), 0 0 40px rgba(59, 130, 246, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  display: block;
+  animation: shimmer 1.5s ease-in-out 1.8s both;
 }
 
-.skillsImage:hover {
-  transform: scale(1.02);
+.waveOverlay {
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(59, 130, 246, 0.4) 30%,
+    rgba(139, 92, 246, 0.4) 50%,
+    rgba(59, 130, 246, 0.4) 70%,
+    transparent 100%
+  );
+  border-radius: var(--radius-2xl);
+  pointer-events: none;
+  animation: waveSlide 1.5s ease-in-out 0.8s both;
+  transform: skewX(-15deg);
+}
+
+@keyframes waveSlide {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes shimmer {
+  0%, 100% {
+    filter: brightness(1) contrast(1);
+  }
+  50% {
+    filter: brightness(1.1) contrast(1.05);
+  }
+}
+
+@media (max-width: 1200px) {
+  .imageContainer {
+    max-width: 900px;
+    padding: 2.5rem 1.5rem;
+  }
 }
 
 @media (max-width: 1024px) {
@@ -58,16 +116,69 @@
   }
 
   .imageContainer {
-    padding: 1.5rem;
+    max-width: 750px;
+    padding: 2rem 1.5rem;
+  }
+
+  .skillsImage {
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25), 0 0 30px rgba(59, 130, 246, 0.08);
   }
 }
 
 @media (max-width: 768px) {
+  .skills {
+    padding: var(--spacing-3xl) 0;
+  }
+
+  .header {
+    margin-bottom: 3rem;
+  }
+
   .sectionTitle {
     font-size: var(--font-size-2xl);
   }
 
   .imageContainer {
-    padding: 1rem;
+    max-width: 100%;
+    padding: 1.5rem 1rem;
+  }
+
+  .skillsImage {
+    border-radius: var(--radius-xl);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2), 0 0 25px rgba(59, 130, 246, 0.06);
+  }
+
+  .waveOverlay {
+    border-radius: var(--radius-xl);
+  }
+}
+
+@media (max-width: 480px) {
+  .skills {
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .header {
+    margin-bottom: 2rem;
+  }
+
+  .sectionLabel {
+    font-size: var(--font-size-xs);
+  }
+
+  .sectionTitle {
+    font-size: var(--font-size-xl);
+  }
+
+  .imageContainer {
+    padding: 1rem 0.5rem;
+  }
+
+  .skillsImage {
+    border-radius: var(--radius-lg);
+  }
+
+  .waveOverlay {
+    border-radius: var(--radius-lg);
   }
 }

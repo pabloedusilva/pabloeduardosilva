@@ -33,26 +33,54 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: '1',
-    company: 'Tech Company',
-    position: 'Desenvolvedor Full Stack',
-    period: '2023 - Presente',
-    description: 'Desenvolvimento de aplicações web modernas e escaláveis.',
+    company: 'FSFX - Fundação São Francisco Xavier',
+    position: 'Atendente de Call Center',
+    period: 'Ago 2024 - Presente',
+    description: 'Atuo no call center da FSFX, realizando agendamento de consultas para as unidades Usifamília e HMC, prestando atendimento receptivo via telefone e WhatsApp.',
     achievements: [
-      'Implementação de arquitetura microserviços',
-      'Otimização de performance resultando em 40% de melhoria',
-      'Mentoria de desenvolvedores júnior'
+      'Gerenciamento de agendamentos para múltiplas unidades de saúde',
+      'Atendimento multicanal (telefone e WhatsApp)',
+      'Suporte direto aos pacientes com foco em qualidade no atendimento'
     ]
   },
   {
     id: '2',
-    company: 'Digital Agency',
-    position: 'Desenvolvedor Front-end',
-    period: '2021 - 2023',
-    description: 'Criação de interfaces modernas e responsivas para diversos clientes.',
+    company: 'EPTOM',
+    position: 'Jovem Aprendiz Administrativo',
+    period: 'Fev 2023 - Jun 2024',
+    description: 'Atuei no setor de Contabilidade realizando rotinas administrativas relacionadas ao controle de ponto e frequência dos servidores.',
     achievements: [
-      'Desenvolvimento de mais de 20 projetos web',
-      'Implementação de design systems',
-      'Liderança técnica em projetos complexos'
+      'Apuração e controle de registros de ponto',
+      'Lançamento de descontos, análise de compensações e conferência de dados',
+      'Apoio na organização de informações para fechamento contábil',
+      'Garantia de correto controle interno e precisão nos registros'
+    ]
+  },
+  {
+    id: '3',
+    company: 'Unova Cursos',
+    position: 'Professor de Informática',
+    period: 'Mai 2022 - Jul 2022',
+    description: 'Instrutor de informática básica, ministrando aulas sobre Pacote Office (Word, Excel e PowerPoint), sistemas operacionais e noções de hardware e software.',
+    achievements: [
+      'Ministração de aulas práticas de Pacote Office completo',
+      'Orientação sobre conceitos de sistemas operacionais',
+      'Capacitação de alunos para uso profissional de ferramentas tecnológicas',
+      'Preparação de conteúdo didático acessível e prático'
+    ]
+  },
+  {
+    id: '4',
+    company: 'Âncora Segurança Eletrônica',
+    position: 'Técnico de Segurança Eletrônica',
+    period: 'Jan 2021 - Jan 2023',
+    description: 'Instalação e manutenção de sistemas de segurança, como câmeras (CFTV) e alarmes, incluindo passagem de cabos, fixação de equipamentos e serviços elétricos.',
+    achievements: [
+      'Instalação completa de sistemas CFTV e alarmes',
+      'Execução de serviços elétricos residenciais e comerciais',
+      'Testes de funcionamento e ajustes técnicos especializados',
+      'Garantia de qualidade, segurança e bom funcionamento dos sistemas',
+      'Atendimento técnico com foco em satisfação do cliente'
     ]
   }
 ];
@@ -60,17 +88,31 @@ export const experiences: Experience[] = [
 export const education: Education[] = [
   {
     id: '1',
-    institution: 'Universidade Federal',
-    degree: 'Bacharelado em Ciência da Computação',
-    period: '2018 - 2022',
-    description: 'Formação completa em desenvolvimento de software e sistemas.'
+    institution: 'Senai MG',
+    degree: 'Curso Técnico em Informática para Internet',
+    period: 'Mar 2024 - Set 2025',
+    description: 'Formação técnica focada em desenvolvimento web e tecnologias para internet.'
   },
   {
     id: '2',
-    institution: 'Udemy / Rocketseat',
-    degree: 'Cursos de Especialização',
-    period: '2020 - Presente',
-    description: 'React, Node.js, TypeScript, Cloud Computing e DevOps.'
+    institution: 'CNI - Centro de Formação Profissional',
+    degree: 'Inglês Básico',
+    period: 'Jan 2018 - Trancado',
+    description: 'Curso de inglês básico com foco em comunicação e vocabulário essencial.'
+  },
+  {
+    id: '3',
+    institution: 'CNI - Centro de Formação Profissional',
+    degree: 'Informática Básica',
+    period: 'Jan 2018 - Trancado',
+    description: 'Fundamentos de informática, sistemas operacionais e ferramentas essenciais.'
+  },
+  {
+    id: '4',
+    institution: 'Enjoy',
+    degree: 'Mídias Sociais',
+    period: 'Jan 2017 - Mar 2017',
+    description: 'Curso sobre gestão e estratégias de mídias sociais para marketing digital.'
   }
 ];
 
