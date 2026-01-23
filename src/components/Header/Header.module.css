@@ -10,9 +10,17 @@
 }
 
 .header.scrolled {
-  background: rgba(23, 23, 23, 0.8);
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(20px) saturate(180%);
   padding: 1rem 0;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header.scrolled {
+    background: rgba(23, 23, 23, 0.8);
+    box-shadow: none;
+  }
 }
 
 .container {
@@ -36,13 +44,13 @@
 }
 
 .logoImage {
-  height: 40px;
+  height: 50px;
   width: auto;
   transition: all 0.4s ease;
 }
 
 .header.scrolled .logoImage {
-  height: 35px;
+  height: 42px;
 }
 
 .logoFirst {
@@ -51,22 +59,18 @@
 }
 
 .header.scrolled .logoFirst {
-  color: white;
+  color: var(--color-text-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header.scrolled .logoFirst {
+    color: white;
+  }
 }
 
 .logoDot {
   color: var(--color-accent);
   font-size: var(--font-size-2xl);
-}
-
-.logoImage {
-  height: 50px;
-  width: auto;
-  transition: all 0.4s ease;
-}
-
-.header.scrolled .logoImage {
-  height: 42px;
 }
 
 .nav {
@@ -86,7 +90,13 @@
 }
 
 .header.scrolled .navLink {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--color-text-secondary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header.scrolled .navLink {
+    color: rgba(255, 255, 255, 0.8);
+  }
 }
 
 .navLink::after {
@@ -105,7 +115,13 @@
 }
 
 .header.scrolled .navLink:hover {
-  color: white;
+  color: var(--color-text-primary);
+}
+
+@media (prefers-color-scheme: dark) {
+  .header.scrolled .navLink:hover {
+    color: white;
+  }
 }
 
 .navLink:hover::after {
@@ -125,13 +141,9 @@
   display: block;
   width: 24px;
   height: 2px;
-  background: var(--color-text-primary);
+  background: var(--color-accent);
   position: relative;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header.scrolled .hamburger {
-  background: white;
 }
 
 .hamburger::before,
@@ -140,13 +152,8 @@
   position: absolute;
   width: 24px;
   height: 2px;
-  background: var(--color-text-primary);
+  background: var(--color-accent);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.header.scrolled .hamburger::before,
-.header.scrolled .hamburger::after {
-  background: white;
 }
 
 .hamburger::before {
@@ -164,11 +171,13 @@
 .hamburger.open::before {
   transform: rotate(45deg);
   top: 0;
+  background: var(--color-accent);
 }
 
 .hamburger.open::after {
   transform: rotate(-45deg);
   top: 0;
+  background: var(--color-accent);
 }
 
 .mobileMenu {
