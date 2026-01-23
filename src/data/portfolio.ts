@@ -3,36 +3,63 @@ import { Project, Experience, Education, Skill } from '@/types';
 export const projects: Project[] = [
   {
     id: '1',
-    title: 'Projeto E-commerce',
-    description: 'Plataforma completa de e-commerce com carrinho, pagamentos e painel administrativo.',
-    image: '/assets/imagens/projects/project1.jpg',
-    technologies: ['React', 'Node.js', 'MongoDB', 'Stripe'],
-    githubUrl: 'https://github.com/pabloedusilva',
-    liveUrl: 'https://demo-project.com'
+    title: 'Orçamentos Retífica',
+    description: 'Aplicação web em Node.js para a Jânio Retífica. Sistema completo de orçamentos que gera arquivos PDF e integra com impressora EPSON para impressão automática.',
+    image: '/assets/imagens/projects/OrcamentoRetifica.jpg',
+    technologies: ['Node.js', 'Express', 'PDF', 'EPSON API'],
+    githubUrl: 'https://github.com/pabloedusilva/orcamentos_retifica',
+    liveUrl: 'https://orcamentos-retifica.onrender.com/'
   },
   {
     id: '2',
-    title: 'Dashboard Analytics',
-    description: 'Dashboard interativo com gráficos e métricas em tempo real para análise de dados.',
-    image: '/assets/imagens/projects/project2.jpg',
-    technologies: ['React', 'TypeScript', 'Chart.js', 'Firebase'],
-    githubUrl: 'https://github.com/pabloedusilva',
-    liveUrl: 'https://demo-project.com'
+    title: 'Régua Máxima',
+    description: 'Plataforma de agendamento de barbearia em desenvolvimento. Frontend completo com interface intuitiva e diferenciada. Backend em desenvolvimento com funcionalidades inovadoras e profissionais já na fila para migração.',
+    image: [
+      '/assets/imagens/projects/ReguaMaxima1.jpg',
+      '/assets/imagens/projects/RéguaMáxima2.jpg'
+    ],
+    technologies: ['React', 'TypeScript', 'Node.js', 'PostgreSQL'],
+    githubUrl: 'https://github.com/pabloedusilva/ReguaMaxima',
+    liveUrl: 'https://app.reguamaxima.com.br/'
   },
   {
     id: '3',
-    title: 'App de Produtividade',
-    description: 'Aplicativo para gerenciamento de tarefas com recursos de colaboração em equipe.',
-    image: '/assets/imagens/projects/project3.jpg',
-    technologies: ['React Native', 'TypeScript', 'Redux', 'Express'],
-    githubUrl: 'https://github.com/pabloedusilva',
-    liveUrl: 'https://demo-project.com'
+    title: 'Portfólio Pessoal',
+    description: 'Meu portfólio pessoal desenvolvido com React e TypeScript. Apresenta minhas informações, formações e projetos de forma moderna e interativa.',
+    image: '/assets/imagens/projects/PortifolioPessoal.jpg',
+    technologies: ['React', 'TypeScript', 'Vite', 'Framer Motion'],
+    githubUrl: 'https://github.com/pabloedusilva/pabloeduardosilva',
+    liveUrl: 'https://pabloeduardosilva.onrender.com/'
+  },
+  {
+    id: '4',
+    title: 'Next Segurança Eletrônica',
+    description: 'Landing page profissional para empresa de segurança eletrônica. Portfólio completo com apresentação de serviços de instalação de câmeras, alarmes e sistemas de segurança em geral para vendas e divulgação.',
+    image: '/assets/imagens/projects/NextSegurança.jpg',
+    technologies: ['React', 'TypeScript', 'CSS3', 'Responsive Design'],
+    githubUrl: 'https://github.com/pabloedusilva/NextSegurancaEletronica',
+    liveUrl: 'https://nextsegurancaeletronica.onrender.com/'
   }
 ];
 
 export const experiences: Experience[] = [
   {
     id: '1',
+    company: 'Freelancer',
+    position: 'Desenvolvedor Web Full Stack',
+    period: 'Jan 2023 - Presente',
+    description: 'Desenvolvimento de aplicações web completas para diversos clientes, desde landing pages institucionais até sistemas complexos com integração de APIs, gerenciamento de dados e automação de processos.',
+    achievements: [
+      'Desenvolvimento de sistemas personalizados com React, TypeScript e Node.js',
+      'Criação de aplicações com integração de APIs e bancos de dados',
+      'Implementação de automação de processos e geração de relatórios em PDF',
+      'Desenvolvimento de interfaces modernas e responsivas',
+      'Integração com impressoras e dispositivos externos',
+      'Deploy e manutenção de aplicações em produção'
+    ]
+  },
+  {
+    id: '2',
     company: 'FSFX - Fundação São Francisco Xavier',
     position: 'Atendente de Call Center',
     period: 'Ago 2024 - Presente',
@@ -44,7 +71,7 @@ export const experiences: Experience[] = [
     ]
   },
   {
-    id: '2',
+    id: '3',
     company: 'EPTOM',
     position: 'Jovem Aprendiz Administrativo',
     period: 'Fev 2023 - Jun 2024',
@@ -57,7 +84,7 @@ export const experiences: Experience[] = [
     ]
   },
   {
-    id: '3',
+    id: '4',
     company: 'Unova Cursos',
     position: 'Professor de Informática',
     period: 'Mai 2022 - Jul 2022',
@@ -70,7 +97,7 @@ export const experiences: Experience[] = [
     ]
   },
   {
-    id: '4',
+    id: '5',
     company: 'Âncora Segurança Eletrônica',
     position: 'Técnico de Segurança Eletrônica',
     period: 'Jan 2021 - Jan 2023',
@@ -143,6 +170,6 @@ export const personalInfo = {
   description: 'Desenvolvedor apaixonado por criar experiências digitais incríveis. Especializado em React, TypeScript e Node.js, com foco em código limpo e performance.',
   email: 'contato@pabloedusilva.com',
   github: 'https://github.com/pabloedusilva',
-  linkedin: 'https://linkedin.com/in/pabloedusilva',
+  whatsapp: 'https://wa.me/5531985079718',
   resumeUrl: '/assets/curriculo-pablo-eduardo-silva.pdf'
 };

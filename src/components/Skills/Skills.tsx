@@ -39,7 +39,7 @@ const Skills = () => {
         >
           <div className={styles.imageWrapper}>
             <img
-              src="/tecnologia e ferramentas.svg"
+              src="/assets/imagens/elementos/tecnologia e ferramentas.svg"
               alt="Tecnologias e Ferramentas"
               className={styles.skillsImage}
             />

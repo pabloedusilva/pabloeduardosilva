@@ -101,6 +101,19 @@ const Education = () => {
             </motion.div>
           ))}
         </div>
+
+        <motion.div
+          className={styles.continueLearning}
+          initial={{ opacity: 0, y: 20 }}
+          animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ 
+            delay: education.length * 0.1 + 0.2, 
+            duration: 0.5
+          }}
+        >
+          <span className={styles.dots}>•</span>
+          <span className={styles.learningText}>Em constante aprendizado</span>
+        </motion.div>
       </div>
     </section>
   );

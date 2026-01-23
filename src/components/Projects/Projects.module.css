@@ -69,11 +69,85 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform var(--transition-slow);
+  transition: transform 0.6s ease;
 }
 
 .projectCard:hover .projectImage {
-  transform: scale(1.05);
+  transform: scale(1.1);
+}
+
+/* Carousel Controls */
+.carouselButton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  border: none;
+  color: var(--color-text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0;
+  transition: all var(--transition-base);
+  z-index: 2;
+}
+
+.projectCard:hover .carouselButton {
+  opacity: 1;
+}
+
+.carouselButton:hover {
+  background: var(--color-accent);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carouselButton svg {
+  width: 20px;
+  height: 20px;
+}
+
+.prevButton {
+  left: 12px;
+}
+
+.nextButton {
+  right: 12px;
+}
+
+.carouselDots {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  z-index: 2;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-base);
+  padding: 0;
+}
+
+.dot:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.activeDot {
+  background: var(--color-accent);
+  width: 24px;
+  border-radius: 4px;
 }
 
 .imageOverlay {
@@ -85,6 +159,7 @@
   justify-content: center;
   opacity: 0;
   transition: opacity var(--transition-base);
+  z-index: 1;
 }
 
 .projectCard:hover .imageOverlay {
@@ -197,6 +272,39 @@
   background: var(--color-accent-dark);
   border-color: var(--color-accent-dark);
   color: white;
+}
+
+.viewAllContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
+.viewAllButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+  color: var(--color-text-primary);
+  background: transparent;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  text-decoration: none;
+  transition: all var(--transition-base);
+  font-family: var(--font-family);
+}
+
+.viewAllButton:hover {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb), 0.05);
+}
+
+.githubIcon {
+  width: 20px;
+  height: 20px;
 }
 
 @media (max-width: 1024px) {
